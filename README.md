@@ -1,2 +1,2 @@
-# ZAGA-ZAGA PORTAL
+# Proto-zaga PORTAL
 Web portal for auto-generated proto documentation
