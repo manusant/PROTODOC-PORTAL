@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "proto-docs": {
+    "argon-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/proto-docs",
+            "outputPath": "dist/argon-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/css/argon.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/nouislider/distribute/nouislider.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/argon.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/headroom.js/dist/js/headroom.min.js",
+              "node_modules/nouislider/distribute/nouislider.min.js",
+              "node_modules/onscreen/dist/on-screen.umd.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -50,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "proto-docs:build"
+            "browserTarget": "argon-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "proto-docs:build:production"
+              "browserTarget": "argon-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "proto-docs:build"
+            "browserTarget": "argon-angular:build"
           }
         },
         "test": {
@@ -95,7 +105,7 @@
         }
       }
     },
-    "proto-docs-e2e": {
+    "argon-angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +113,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "proto-docs:serve"
+            "devServerTarget": "argon-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "proto-docs:serve:production"
+              "devServerTarget": "argon-angular:serve:production"
             }
           }
         },
@@ -123,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "proto-docs"
+  "defaultProject": "argon-angular"
 }
